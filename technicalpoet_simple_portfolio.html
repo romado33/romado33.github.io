@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rob Dods · Technical Poet</title>
+  <style>
+    :root{
+      --bg:#0b0f19;
+      --panel:#111827;
+      --text:#e5e7eb;
+      --muted:#9ca3af;
+      --line:#1f2937;
+      --accent:#60a5fa;
+      --accent2:#34d399;
+      --radius:16px;
+      --shadow: 0 12px 30px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      background: radial-gradient(1200px 700px at 20% -10%, rgba(96,165,250,.22), transparent 60%),
+                  radial-gradient(900px 600px at 90% 10%, rgba(52,211,153,.18), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+      line-height:1.6;
+    }
+    a{color:inherit}
+    .wrap{max-width:980px;margin:0 auto;padding:28px 18px 60px}
+    .top{
+      display:flex; align-items:center; justify-content:space-between; gap:16px;
+      padding:18px 18px; border:1px solid var(--line); border-radius:var(--radius);
+      background: rgba(17,24,39,.75); box-shadow: var(--shadow); backdrop-filter: blur(8px);
+    }
+    .brand h1{margin:0;font-size:28px;letter-spacing:.2px}
+    .brand p{margin:6px 0 0;color:var(--muted);font-size:14px}
+    .cta{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+    .btn{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:10px 12px; border-radius:999px; border:1px solid var(--line);
+      text-decoration:none; background: rgba(255,255,255,.03);
+    }
+    .btn:hover{border-color: rgba(96,165,250,.6)}
+    .btn.primary{background: rgba(96,165,250,.14); border-color: rgba(96,165,250,.35)}
+    .btn .dot{width:8px;height:8px;border-radius:99px;background:var(--accent)}
+    .section{margin-top:22px}
+    .section h2{
+      margin:0 0 10px;
+      font-size:16px;
+      color:var(--muted);
+      letter-spacing:.12em;
+      text-transform:uppercase;
+    }
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap:14px;
+    }
+    .card{
+      grid-column: span 6;
+      padding:16px;
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      background: rgba(17,24,39,.75);
+      box-shadow: 0 10px 26px rgba(0,0,0,.22);
+    }
+    @media (max-width: 760px){
+      .card{grid-column: span 12}
+      .top{flex-direction:column; align-items:flex-start}
+      .cta{justify-content:flex-start}
+    }
+    .card h3{margin:0 0 6px;font-size:16px}
+    .card p{margin:0 0 12px;color:var(--muted);font-size:14px}
+    .pill{
+      display:inline-flex; align-items:center; gap:8px;
+      font-size:13px; text-decoration:none;
+      padding:8px 10px; border-radius:999px;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(0,0,0,.18);
+    }
+    .pill:hover{border-color: rgba(52,211,153,.55)}
+    .pill .arrow{color:var(--accent2)}
+    footer{
+      margin-top:28px;
+      color: var(--muted);
+      font-size:12.5px;
+      display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap;
+      padding-top:18px; border-top:1px solid var(--line);
+    }
+    .note{color:var(--muted);font-size:13.5px;margin:14px 2px 0}
+    .note strong{color:var(--text)}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="top">
+      <div class="brand">
+        <h1>Rob Dods · Technical Poet</h1>
+        <p>Technical writing · API docs · documentation tooling · clear explanations</p>
+        <p class="note"><strong>Tip:</strong> If you want this page to also support recruiter searches, consider adding 1 link to a public GitHub profile and 1 downloadable resume PDF.</p>
+      </div>
+      <div class="cta" aria-label="Primary links">
+        <a class="btn primary" href="https://www.linkedin.com/in/mark-robert-dods-90a61355/" target="_blank" rel="noopener">
+          <span class="dot" aria-hidden="true"></span> LinkedIn
+        </a>
+        <a class="btn" href="https://medium.com/@romado33" target="_blank" rel="noopener">
+          Medium
+        </a>
+        <a class="btn" href="https://romado33.wixsite.com/technicalpoet" target="_blank" rel="noopener">
+          Original Wix Site
+        </a>
+      </div>
+    </header>
+
+    <section class="section" aria-label="Featured technical writing">
+      <h2>Featured technical writing</h2>
+      <div class="grid" role="list">
+        <article class="card" role="listitem">
+          <h3>Interactive API docs (SwaggerHub)</h3>
+          <p>OpenAPI-based documentation project (portfolio).</p>
+          <a class="pill" href="https://app.swaggerhub.com/apis-docs/romado33/the-mma_api/1.0" target="_blank" rel="noopener">
+            View docs <span class="arrow" aria-hidden="true">→</span>
+          </a>
+          <p class="note">Original API reference: <a href="https://metmuseum.github.io/" target="_blank" rel="noopener">metmuseum.github.io</a></p>
+        </article>
+
+        <article class="card" role="listitem">
+          <h3>Google search operators (article)</h3>
+          <p>How to search more efficiently using operators.</p>
+          <a class="pill" href="https://medium.com/@romado33/how-to-efficiently-search-on-google-using-operators-ffebd9e4c3fa" target="_blank" rel="noopener">
+            Read <span class="arrow" aria-hidden="true">→</span>
+          </a>
+        </article>
+
+        <article class="card" role="listitem">
+          <h3>Edit a website locally in Chrome (PDF)</h3>
+          <p>Quick how-to (PDF sample).</p>
+          <a class="pill" href="https://578157b6-e13e-48c7-8454-7222e0b1e0f0.filesusr.com/ugd/cdad40_ddbfb0be676e4e82b57b9b6239bc091f.pdf" target="_blank" rel="noopener">
+            Open PDF <span class="arrow" aria-hidden="true">→</span>
+          </a>
+        </article>
+
+        <article class="card" role="listitem">
+          <h3>Correct GPS data in a Garmin GPX (article)</h3>
+          <p>Practical troubleshooting / data cleanup guide.</p>
+          <a class="pill" href="https://medium.com/@romado33/how-to-correct-gps-data-in-a-garmin-activity-file-gpx-cb97bffd0bcc" target="_blank" rel="noopener">
+            Read <span class="arrow" aria-hidden="true">→</span>
+          </a>
+        </article>
+
+        <article class="card" role="listitem">
+          <h3>AI article (sample)</h3>
+          <p>Short, practical writing on AI.</p>
+          <a class="pill" href="https://medium.com/@romado33/4-innovative-uses-of-artificial-intelligence-5d837a79c7c8" target="_blank" rel="noopener">
+            Read <span class="arrow" aria-hidden="true">→</span>
+          </a>
+        </article>
+
+        <article class="card" role="listitem">
+          <h3>Additional PDF samples</h3>
+          <p>Two more downloadable PDFs from the Wix site.</p>
+          <div style="display:flex; gap:10px; flex-wrap:wrap">
+            <a class="pill" href="https://578157b6-e13e-48c7-8454-7222e0b1e0f0.filesusr.com/ugd/cdad40_734e16ec57a54fd883158faeed012d1d.pdf" target="_blank" rel="noopener">
+              PDF 1 <span class="arrow" aria-hidden="true">→</span>
+            </a>
+            <a class="pill" href="https://578157b6-e13e-48c7-8454-7222e0b1e0f0.filesusr.com/ugd/cdad40_9521af4e152d4ebeb8fe3c7dc0b5d447.pdf" target="_blank" rel="noopener">
+              PDF 2 <span class="arrow" aria-hidden="true">→</span>
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" aria-label="Selected non-technical writing">
+      <h2>Selected writing</h2>
+      <div class="grid" role="list">
+        <article class="card" role="listitem">
+          <h3>Poetry profile</h3>
+          <p>Creative writing.</p>
+          <a class="pill" href="https://allpoetry.com/Romado33" target="_blank" rel="noopener">
+            View <span class="arrow" aria-hidden="true">→</span>
+          </a>
+        </article>
+
+        <article class="card" role="listitem">
+          <h3>Rhyme / writing articles</h3>
+          <p>Selected links.</p>
+          <div style="display:flex; gap:10px; flex-wrap:wrap">
+            <a class="pill" href="https://writingcooperative.com/examine-the-rhyme-schemes-a-trick-for-writing-rhyming-poetry-1b34e000dc7b" target="_blank" rel="noopener">
+              Rhyme schemes <span class="arrow" aria-hidden="true">→</span>
+            </a>
+            <a class="pill" href="https://medium.com/illumination/a-rhyme-primer-97099fc0ae61" target="_blank" rel="noopener">
+              Rhyme primer <span class="arrow" aria-hidden="true">→</span>
+            </a>
+          </div>
+        </article>
+
+        <article class="card" role="listitem">
+          <h3>Other published pieces (Medium)</h3>
+          <p>A few additional links already on your Wix page.</p>
+          <div style="display:flex; gap:10px; flex-wrap:wrap">
+            <a class="pill" href="https://medium.com/runners-life/find-your-running-strengths-and-use-them-17a5e19f508c" target="_blank" rel="noopener">
+              Running strengths <span class="arrow" aria-hidden="true">→</span>
+            </a>
+            <a class="pill" href="https://medium.com/@romado33/who-is-the-goot-distance-runner-greatest-of-our-time-b8a73d7df424" target="_blank" rel="noopener">
+              Distance runner <span class="arrow" aria-hidden="true">→</span>
+            </a>
+            <a class="pill" href="https://medium.com/@romado33/bernie-nicholls-a-great-ish-player-in-his-own-right-d6c2f10e9fe6" target="_blank" rel="noopener">
+              Bernie Nicholls <span class="arrow" aria-hidden="true">→</span>
+            </a>
+            <a class="pill" href="https://medium.datadriveninvestor.com/6-lessons-from-my-first-year-of-investing-3b7f5ada283c" target="_blank" rel="noopener">
+              Investing lessons <span class="arrow" aria-hidden="true">→</span>
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <footer>
+      <span>© <span id="y"></span> Rob Dods</span>
+      <span>Single-file HTML (simple, fast, easy to host anywhere)</span>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
