@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light dark" />
+
+  <title>Technical Writing | Technical Poet</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Rob Dods — Technical Writer & Product Enablement. APIs · Developer Platforms · AI/LLM Systems. Selected work samples, tools, and contact." />
+  <link rel="canonical" href="https://romado33.wixsite.com/technicalpoet" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Technical Writing | Technical Poet" />
+  <meta property="og:description" content="Rob Dods — Technical Writer & Product Enablement. APIs · Developer Platforms · AI/LLM Systems. Selected work samples, tools, and contact." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://romado33.wixsite.com/technicalpoet" />
+  <!-- Keep your existing Wix OG image if you want continuity -->
+  <meta property="og:image" content="https://static.wixstatic.com/media/cdad40_85bdb26d522c443193e279d709e786c4~mv2.jpg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Technical Writing | Technical Poet" />
+  <meta name="twitter:description" content="Rob Dods — Technical Writer & Product Enablement. APIs · Developer Platforms · AI/LLM Systems." />
+  <meta name="twitter:image" content="https://static.wixstatic.com/media/cdad40_85bdb26d522c443193e279d709e786c4~mv2.jpg" />
+
+  <!-- Favicons (optional) -->
+  <link rel="icon" href="https://www.wix.com/favicon.ico" />
+
+  <style>
+    :root{
+      --bg: #0b0d12;
+      --panel: rgba(255,255,255,.06);
+      --panel-2: rgba(255,255,255,.08);
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.72);
+      --muted2: rgba(255,255,255,.56);
+      --border: rgba(255,255,255,.12);
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius: 18px;
+      --radius2: 24px;
+      --max: 1120px;
+      --a1: #88c0ff;
+      --a2: #8ef0c0;
+      --a3: #ffd27a;
+    }
+    @media (prefers-color-scheme: light) {
+      :root{
+        --bg: #f7f8fb;
+        --panel: rgba(0,0,0,.04);
+        --panel-2: rgba(0,0,0,.06);
+        --text: rgba(10,12,18,.92);
+        --muted: rgba(10,12,18,.72);
+        --muted2: rgba(10,12,18,.56);
+        --border: rgba(10,12,18,.10);
+        --shadow: 0 10px 30px rgba(10,12,18,.10);
+      }
+    }
+    *{ box-sizing:border-box; }
+    html, body{ height:100%; }
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      color: var(--text);
+      background:
+        radial-gradient(900px 500px at 15% 10%, rgba(136,192,255,.18), transparent 65%),
+        radial-gradient(900px 500px at 85% 0%, rgba(142,240,192,.16), transparent 60%),
+        radial-gradient(900px 500px at 70% 80%, rgba(255,210,122,.12), transparent 65%),
+        var(--bg);
+      line-height: 1.55;
+      letter-spacing: .2px;
+    }
+    a{ color: inherit; text-decoration: none; }
+    a:hover{ text-decoration: underline; text-underline-offset: 4px; }
+    .wrap{ max-width: var(--max); margin: 0 auto; padding: 32px 18px 64px; }
+    .topbar{ display:flex; align-items:center; justify-content:space-between; gap:16px; padding: 10px 0 22px; }
+    .brand{ display:flex; align-items:center; gap:12px; min-width: 220px; }
+    .mark{ width: 38px; height: 38px; border-radius: 12px; background: linear-gradient(135deg, rgba(136,192,255,.85), rgba(142,240,192,.75)); box-shadow: var(--shadow); border: 1px solid var(--border); }
+    .brand strong{ display:block; font-size: 14px; letter-spacing:.6px; text-transform: uppercase; }
+    .brand span{ display:block; font-size: 13px; color: var(--muted2); margin-top: 1px; }
+    .nav{ display:flex; flex-wrap: wrap; gap: 10px; justify-content:flex-end; }
+    .pill{ display:inline-flex; align-items:center; gap:8px; padding: 9px 12px; border-radius: 999px; border: 1px solid var(--border); background: var(--panel); backdrop-filter: blur(10px); font-size: 13px; color: var(--muted); transition: transform .15s ease, background .15s ease, border-color .15s ease; }
+    .pill:hover{ text-decoration:none; transform: translateY(-1px); background: var(--panel-2); border-color: rgba(255,255,255,.18); }
+
+    .hero{ border: 1px solid var(--border); background: linear-gradient(180deg, var(--panel), transparent); border-radius: var(--radius2); padding: 26px; box-shadow: var(--shadow); backdrop-filter: blur(10px); }
+    .hero-grid{ display:grid; grid-template-columns: 1.2fr .8fr; gap: 22px; align-items: start; }
+    @media (max-width: 900px){ .hero-grid{ grid-template-columns: 1fr; } }
+    h1{ margin: 0 0 8px; font-size: clamp(28px, 3.5vw, 44px); line-height: 1.1; letter-spacing: -.4px; }
+    .subhead{ margin: 0 0 14px; color: var(--muted); font-size: 15.5px; max-width: 60ch; }
+    .tagrow{ display:flex; flex-wrap:wrap; gap: 8px; margin-top: 14px; }
+    .tag{ border: 1px solid var(--border); background: rgba(255,255,255,.04); padding: 7px 10px; border-radius: 999px; font-size: 12.5px; color: var(--muted); }
+
+    .cta{ display:flex; flex-wrap:wrap; gap: 10px; margin-top: 18px; }
+    .btn{ display:inline-flex; align-items:center; justify-content:center; gap: 10px; padding: 11px 14px; border-radius: 12px; border: 1px solid var(--border); background: rgba(255,255,255,.06); font-weight: 650; font-size: 13.5px; transition: transform .15s ease, background .15s ease, border-color .15s ease; min-width: 160px; text-decoration:none; }
+    .btn:hover{ transform: translateY(-1px); background: rgba(255,255,255,.10); border-color: rgba(255,255,255,.20); text-decoration:none; }
+    .btn.primary{ background: linear-gradient(135deg, rgba(136,192,255,.35), rgba(142,240,192,.28)); border-color: rgba(136,192,255,.35); }
+    .btn.primary:hover{ border-color: rgba(142,240,192,.42); }
+    .btn .hint{ font-weight: 500; color: var(--muted2); font-size: 12px; }
+
+    .panel{ border: 1px solid var(--border); background: var(--panel); border-radius: var(--radius); padding: 18px; }
+    .panel h3{ margin: 0 0 10px; font-size: 14px; text-transform: uppercase; letter-spacing: .7px; color: var(--muted2); }
+    .facts{ display:grid; gap: 10px; font-size: 13.5px; color: var(--muted); }
+    .facts b{ color: var(--text); font-weight: 650; }
+    .facts .k{ display:flex; justify-content:space-between; gap: 10px; padding: 10px 12px; border-radius: 12px; background: rgba(255,255,255,.04); border: 1px solid var(--border); }
+
+    section{ margin-top: 22px; }
+    .section-title{ display:flex; align-items:baseline; justify-content:space-between; gap: 10px; margin: 26px 0 12px; }
+    .section-title h2{ margin: 0; font-size: 18px; letter-spacing: -.2px; }
+    .section-title p{ margin: 0; color: var(--muted2); font-size: 13px; }
+
+    .grid{ display:grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+    @media (max-width: 980px){ .grid{ grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 640px){ .grid{ grid-template-columns: 1fr; } }
+    .card{ border: 1px solid var(--border); background: rgba(255,255,255,.05); border-radius: var(--radius); padding: 16px; box-shadow: 0 1px 0 rgba(255,255,255,.05); transition: transform .15s ease, background .15s ease, border-color .15s ease; min-height: 150px; }
+    .card:hover{ transform: translateY(-1px); background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.18); }
+    .card h4{ margin: 0 0 8px; font-size: 15px; }
+    .card .meta{ color: var(--muted2); font-size: 12.5px; margin-bottom: 10px; }
+    .card p{ margin: 0 0 10px; color: var(--muted); font-size: 13.5px; }
+    .proof{ display:flex; flex-wrap:wrap; gap: 6px; margin-top: 10px; }
+    .chip{ font-size: 12px; color: var(--muted); border: 1px solid var(--border); background: rgba(255,255,255,.04); border-radius: 999px; padding: 6px 9px; }
+
+    .two-col{ display:grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    @media (max-width: 820px){ .two-col{ grid-template-columns: 1fr; } }
+    .bullets{ margin: 0; padding: 0; list-style: none; display:grid; gap: 10px; }
+    .bullets li{ padding: 12px 12px; border-radius: 14px; border: 1px solid var(--border); background: rgba(255,255,255,.04); color: var(--muted); font-size: 13.5px; }
+    .bullets li b{ color: var(--text); }
+
+    footer{ margin-top: 36px; padding-top: 16px; border-top: 1px solid var(--border); color: var(--muted2); font-size: 12.5px; display:flex; flex-wrap:wrap; gap: 10px; justify-content:space-between; align-items:center; }
+
+    .skip{ position:absolute; left:-999px; top: 0; background: var(--bg); color: var(--text); padding: 10px 12px; border-radius: 12px; border: 1px solid var(--border); z-index: 999; }
+    .skip:focus{ left: 12px; top: 12px; }
+
+    @media print{
+      body{ background: #fff; color:#000; }
+      .hero, .panel, .card, .bullets li, .pill, .btn { box-shadow:none !important; }
+      .pill, .btn { border: 1px solid #ccc; background: #fff; }
+      .mark{ border: 1px solid #ccc; box-shadow:none; }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Rob Dods",
+    "jobTitle": "Technical Writer / Product Enablement",
+    "url": "https://romado33.wixsite.com/technicalpoet",
+    "sameAs": [
+      "https://www.linkedin.com/in/REPLACE_ME",
+      "https://github.com/REPLACE_ME"
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <a class="skip" href="#content">Skip to content</a>
+
+  <div class="wrap">
+    <div class="topbar">
+      <div class="brand" aria-label="Site identity">
+        <div class="mark" aria-hidden="true"></div>
+        <div>
+          <strong>Technical Poet</strong>
+          <span>Technical writing · systems · clarity</span>
+        </div>
+      </div>
+
+      <nav class="nav" aria-label="Primary">
+        <a class="pill" href="#work">Selected work</a>
+        <a class="pill" href="#skills">Core skills</a>
+        <a class="pill" href="#approach">Approach</a>
+        <a class="pill" href="#contact">Contact</a>
+      </nav>
+    </div>
+
+    <main id="content">
+      <header class="hero" aria-label="Hero section">
+        <div class="hero-grid">
+          <div>
+            <h1>Rob Dods</h1>
+            <p class="subhead">
+              <b>Technical Writer & Product Enablement</b> focused on APIs, developer platforms, and AI/LLM systems.
+              I turn complex workflows into clear docs that developers, implementers, and customers can actually use.
+            </p>
+
+            <div class="tagrow" aria-label="Key themes">
+              <span class="tag">API & Developer Docs</span>
+              <span class="tag">OpenAPI · REST · Webhooks</span>
+              <span class="tag">AI/LLM · RAG · Embeddings</span>
+              <span class="tag">Automation · Tooling</span>
+              <span class="tag">Implementation → Docs Bridge</span>
+            </div>
+
+            <div class="cta" aria-label="Primary actions">
+              <a class="btn primary" href="https://www.linkedin.com/in/REPLACE_ME" target="_blank" rel="noopener">
+                LinkedIn <span class="hint">primary profile</span>
+              </a>
+              <a class="btn" href="https://github.com/REPLACE_ME" target="_blank" rel="noopener">
+                GitHub <span class="hint">tools & demos</span>
+              </a>
+              <a class="btn" href="mailto:REPLACE_ME@example.com">
+                Email <span class="hint">fastest contact</span>
+              </a>
+            </div>
+          </div>
+
+          <aside class="panel" aria-label="Quick facts">
+            <h3>Quick facts</h3>
+            <div class="facts">
+              <div class="k"><span><b>Experience</b></span><span>10+ years in IT</span></div>
+              <div class="k"><span><b>Strength</b></span><span>Docs + hands-on systems</span></div>
+              <div class="k"><span><b>Domains</b></span><span>APIs · analytics · automation · AI</span></div>
+              <div class="k"><span><b>Tools</b></span><span>Flare · Markdown · GitHub · Swagger</span></div>
+            </div>
+          </aside>
+        </div>
+      </header>
+
+      <section id="work" aria-label="Selected work">
+        <div class="section-title">
+          <h2>Selected work</h2>
+          <p>4–6 high-signal samples. Replace placeholders with your real links.</p>
+        </div>
+
+        <div class="grid" role="list">
+          <article class="card" role="listitem">
+            <h4>API Documentation Pack</h4>
+            <div class="meta">OpenAPI · Endpoints · Error model · Auth</div>
+            <p>A concise API reference + quickstart that reduces “time-to-first-call” for developers.</p>
+            <a class="pill" href="REPLACE_WITH_LINK" target="_blank" rel="noopener">View sample →</a>
+            <div class="proof"><span class="chip">API reference</span><span class="chip">Quickstart</span><span class="chip">Examples</span></div>
+          </article>
+
+          <article class="card" role="listitem">
+            <h4>Integration Guide</h4>
+            <div class="meta">Webhooks · JSON payloads · Troubleshooting</div>
+            <p>End-to-end integration walkthrough with payload examples, retries, and debugging steps.</p>
+            <a class="pill" href="REPLACE_WITH_LINK" target="_blank" rel="noopener">View sample →</a>
+            <div class="proof"><span class="chip">Implementation clarity</span><span class="chip">Troubleshooting</span></div>
+          </article>
+
+          <article class="card" role="listitem">
+            <h4>AI/LLM Documentation: RAG + Search</h4>
+            <div class="meta">Embeddings · Vector DBs · Evaluation</div>
+            <p>Explanation-oriented content that helps teams ship reliable semantic search and RAG features.</p>
+            <a class="pill" href="REPLACE_WITH_LINK" target="_blank" rel="noopener">View sample →</a>
+            <div class="proof"><span class="chip">Concepts → decisions</span><span class="chip">System diagrams</span></div>
+          </article>
+
+          <article class="card" role="listitem">
+            <h4>Docs Tooling: Semantic Search Simulator</h4>
+            <div class="meta">Relevance testing · Synonyms · Query UX</div>
+            <p>Local simulator to validate synonym strategies, relevance tuning, and search UX for a knowledge base.</p>
+            <a class="pill" href="REPLACE_WITH_GITHUB_REPO" target="_blank" rel="noopener">View repo →</a>
+            <div class="proof"><span class="chip">DocOps</span><span class="chip">Search relevance</span><span class="chip">Tool builder</span></div>
+          </article>
+
+          <article class="card" role="listitem">
+            <h4>Automation Playbook</h4>
+            <div class="meta">Python · Playwright/Selenium · Reliability</div>
+            <p>Practical playbook for automating repetitive workflows with guardrails, logging, and failure recovery.</p>
+            <a class="pill" href="REPLACE_WITH_LINK" target="_blank" rel="noopener">View sample →</a>
+            <div class="proof"><span class="chip">Operational docs</span><span class="chip">Runbooks</span></div>
+          </article>
+
+          <article class="card" role="listitem">
+            <h4>End-user Guide + UI Copy</h4>
+            <div class="meta">UX writing · Help content · Release notes</div>
+            <p>Task-first documentation with consistent terminology, microcopy, and a “findable” structure.</p>
+            <a class="pill" href="REPLACE_WITH_LINK" target="_blank" rel="noopener">View sample →</a>
+            <div class="proof"><span class="chip">User enablement</span><span class="chip">Information design</span></div>
+          </article>
+        </div>
+      </section>
+
+      <section id="skills" aria-label="Core skills">
+        <div class="section-title">
+          <h2>Core skills</h2>
+          <p>Primary identity → differentiator → supporting depth.</p>
+        </div>
+
+        <div class="two-col">
+          <div class="panel">
+            <h3>Technical writing (primary)</h3>
+            <ul class="bullets">
+              <li><b>API & developer documentation</b> (OpenAPI/Swagger, REST, auth, error models)</li>
+              <li><b>Information architecture</b> (task flows, findability, consistency)</li>
+              <li><b>Platform & integration enablement</b> (webhooks, JSON payloads, troubleshooting)</li>
+              <li><b>Docs tooling</b> (MadCap Flare, Markdown, GitHub workflows)</li>
+            </ul>
+          </div>
+
+          <div class="panel">
+            <h3>AI / LLM (differentiator)</h3>
+            <ul class="bullets">
+              <li><b>RAG & semantic search</b> (embeddings, evaluation, relevance tuning)</li>
+              <li><b>Prompting & guardrails</b> (quality, safety, consistency)</li>
+              <li><b>Vector databases</b> (concepts, tradeoffs, practical adoption)</li>
+              <li><b>Developer-first explanations</b> for AI systems and product teams</li>
+            </ul>
+          </div>
+        </div>
+
+        <div style="height:12px"></div>
+
+        <div class="panel">
+          <h3>Data & analytics (supporting depth)</h3>
+          <ul class="bullets">
+            <li><b>SQL & reporting</b> (metrics, KPIs, dashboards)</li>
+            <li><b>Data modeling concepts</b> (ETL pipelines, quality checks, definitions)</li>
+            <li><b>Cross-functional delivery</b> bridging Support/PS/Product/Docs</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="approach" aria-label="Approach">
+        <div class="section-title">
+          <h2>Approach</h2>
+          <p>Keep the “Technical Poet” voice, but after proof.</p>
+        </div>
+
+        <div class="two-col">
+          <div class="panel">
+            <h3>How I work</h3>
+            <ul class="bullets">
+              <li><b>Start with user intent</b>: what someone is trying to do, not what the system is.</li>
+              <li><b>Show the happy path</b>: quickstart first, depth second.</li>
+              <li><b>Make failures legible</b>: error meanings, troubleshooting, and next actions.</li>
+              <li><b>Ship like product</b>: versioning, feedback loops, and measurable outcomes.</li>
+            </ul>
+          </div>
+
+          <div class="panel">
+            <h3>Why “Technical Poet”</h3>
+            <p style="margin:0; color:var(--muted); font-size:13.5px;">
+              Good documentation translates between worlds: engineers, implementers, and end users.
+              I aim for clarity that respects both the system and the human reading it—precise, concise, and usable.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" aria-label="Contact">
+        <div class="section-title">
+          <h2>Contact</h2>
+          <p>Add the real links below and remove placeholders.</p>
+        </div>
+
+        <div class="panel">
+          <div class="cta" style="margin-top:0;">
+            <a class="btn primary" href="https://www.linkedin.com/in/REPLACE_ME" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="btn" href="https://github.com/REPLACE_ME" target="_blank" rel="noopener">GitHub</a>
+            <a class="btn" href="mailto:REPLACE_ME@example.com">Email</a>
+            <a class="btn" href="REPLACE_WITH_RESUME_LINK" target="_blank" rel="noopener">Resume (PDF)</a>
+          </div>
+
+          <p style="margin:14px 0 0; color:var(--muted2); font-size:12.5px;">
+            If you add one more thing: a single-page PDF resume link and 2–3 concrete work sample links.
+          </p>
+        </div>
+      </section>
+
+      <footer>
+        <span>© <span id="year"></span> Rob Dods · Technical Poet</span>
+        <span>Single-file HTML template (easy to embed or host anywhere).</span>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
