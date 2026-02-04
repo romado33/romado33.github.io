@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rob Dods · Technical Poet</title>
+  <style>
+    :root{
+      --bg:#0b0f19;
+      --panel:#111827;
+      --text:#e5e7eb;
+      --muted:#9ca3af;
+      --line:#1f2937;
+      --accent:#60a5fa;
+      --accent2:#34d399;
+      --radius:16px;
+      --shadow:0 12px 30px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+      background:
+        radial-gradient(1200px 700px at 20% -10%, rgba(96,165,250,.22), transparent 60%),
+        radial-gradient(900px 600px at 90% 10%, rgba(52,211,153,.18), transparent 55%),
+        var(--bg);
+      color:var(--text);
+      line-height:1.6;
+    }
+    a{color:inherit}
+    .wrap{max-width:980px;margin:0 auto;padding:28px 18px 60px}
+    .top{
+      display:flex;justify-content:space-between;gap:16px;
+      padding:18px;border:1px solid var(--line);border-radius:var(--radius);
+      background:rgba(17,24,39,.75);box-shadow:var(--shadow);
+    }
+    .brand h1{margin:0;font-size:28px}
+    .brand p{margin:6px 0 0;color:var(--muted);font-size:14px}
+    .cta{display:flex;gap:10px;flex-wrap:wrap}
+    .btn{
+      padding:10px 14px;border-radius:999px;border:1px solid var(--line);
+      text-decoration:none;background:rgba(255,255,255,.03);font-size:14px;
+    }
+    .btn.primary{background:rgba(96,165,250,.14);border-color:rgba(96,165,250,.35)}
+    .btn:hover{border-color:rgba(96,165,250,.6)}
+    .section{margin-top:26px}
+    .section h2{
+      margin:0 0 10px;font-size:15px;color:var(--muted);
+      letter-spacing:.12em;text-transform:uppercase;
+    }
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:14px}
+    .card{
+      grid-column:span 6;padding:16px;border:1px solid var(--line);
+      border-radius:var(--radius);background:rgba(17,24,39,.75);
+    }
+    .card h3{margin:0 0 6px;font-size:16px}
+    .card p{margin:0 0 12px;color:var(--muted);font-size:14px}
+    .pill{
+      display:inline-block;padding:8px 10px;border-radius:999px;
+      border:1px solid rgba(255,255,255,.12);
+      font-size:13px;text-decoration:none;
+    }
+    .pill:hover{border-color:rgba(52,211,153,.55)}
+    footer{
+      margin-top:32px;padding-top:16px;border-top:1px solid var(--line);
+      display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
+      font-size:12.5px;color:var(--muted);
+    }
+    @media(max-width:760px){
+      .card{grid-column:span 12}
+      .top{flex-direction:column}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="top">
+      <div class="brand">
+        <h1>Rob Dods · Technical Poet</h1>
+        <p>Technical writing · API documentation · documentation tooling</p>
+      </div>
+      <nav class="cta">
+        <a class="btn primary" href="https://www.linkedin.com/in/mark-robert-dods-90a61355/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn" href="https://github.com/romado33" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn" href="mailto:romado33@gmail.com">Email</a>
+        <a class="btn" href="CV%20-%20Mark%20Robert%20Dods%20-%20Technical%20Writer.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
+      </nav>
+    </header>
+
+    <section class="section">
+      <h2>Featured technical writing</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Interactive API docs (SwaggerHub)</h3>
+          <p>OpenAPI-based API documentation project.</p>
+          <a class="pill" href="https://app.swaggerhub.com/apis-docs/romado33/the-mma_api/1.0" target="_blank">View docs →</a>
+        </div>
+        <div class="card">
+          <h3>Google search operators</h3>
+          <p>Article on advanced search techniques.</p>
+          <a class="pill" href="https://medium.com/@romado33/how-to-efficiently-search-on-google-using-operators-ffebd9e4c3fa" target="_blank">Read →</a>
+        </div>
+        <div class="card">
+          <h3>Edit a website locally in Chrome (PDF)</h3>
+          <p>Concise how‑to documentation sample.</p>
+          <a class="pill" href="https://578157b6-e13e-48c7-8454-7222e0b1e0f0.filesusr.com/ugd/cdad40_ddbfb0be676e4e82b57b9b6239bc091f.pdf" target="_blank">Open PDF →</a>
+        </div>
+        <div class="card">
+          <h3>Correct GPS data in a Garmin GPX</h3>
+          <p>Practical troubleshooting guide.</p>
+          <a class="pill" href="https://medium.com/@romado33/how-to-correct-gps-data-in-a-garmin-activity-file-gpx-cb97bffd0bcc" target="_blank">Read →</a>
+        </div>
+        <div class="card">
+          <h3>AI writing sample</h3>
+          <p>Short, practical article on AI.</p>
+          <a class="pill" href="https://medium.com/@romado33/4-innovative-uses-of-artificial-intelligence-5d837a79c7c8" target="_blank">Read →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Selected writing</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Poetry profile</h3>
+          <p>Creative writing and published poems.</p>
+          <a class="pill" href="https://allpoetry.com/Romado33" target="_blank">View →</a>
+        </div>
+        <div class="card">
+          <h3>Rhyme & writing articles</h3>
+          <p>Explorations of rhyme and structure.</p>
+          <a class="pill" href="https://writingcooperative.com/examine-the-rhyme-schemes-a-trick-for-writing-rhyming-poetry-1b34e000dc7b" target="_blank">Read →</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <span>© <span id="y"></span> Rob Dods</span>
+      <span>Single‑file HTML · GitHub Pages ready</span>
+    </footer>
+  </div>
+  <script>
+    document.getElementById("y").textContent=new Date().getFullYear();
+  </script>
+</body>
+</html>
